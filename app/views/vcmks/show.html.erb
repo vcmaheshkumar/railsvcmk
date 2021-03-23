@@ -1,0 +1,13 @@
+
+
+<div class="jumbotron">
+  <h1 class="display-4"><%= @vcmk.first_name %> <%= @vcmk.last_name %></h1>
+  <p class="lead"><%= @vcmk.email %> | <%= @vcmk.phone %></p>
+  <hr class="my-4">
+  <p><%= @vcmk.twitter %></p>
+  <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+    <%= link_to 'Edit', edit_vcmk_path(@vcmk), class:"btn btn-success" %>
+    <%= link_to 'Dlelete', @vcmk, method: :delete, class:"btn btn-danger", data: { confirm: 'Are you sure?' } %>
+    <%= link_to 'Back', vcmks_path, class:"btn btn-dark" %>
+  </div>
+</div>
